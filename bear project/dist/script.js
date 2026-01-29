@@ -4,7 +4,8 @@ const bear = document.getElementById("bear");
 const face = document.getElementById("face");
 const rightEye = document.getElementById("rightEye");
 const rightPupil = rightEye.querySelector(".pupil");
-let isHoveringFace = false;
+const winkSound = document.getElementById("winkSound");
+
 
  
 bear.addEventListener("mouseenter", () => {
@@ -24,6 +25,9 @@ face.addEventListener("mouseenter", () => {
   rightEye.style.borderRadius = "10px";
   rightPupil.style.opacity = "0";
   rightEye.classList.add("no-liner");
+ winkSound.currentTime = 0;
+winkSound.play();
+
 });
 
 face.addEventListener("mouseleave", () => {
