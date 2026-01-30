@@ -37,7 +37,7 @@ face.addEventListener("click", () => {
   winkSound.currentTime = 0; // rewind
   winkSound.play();
 });
-document.body.addEventListener("click", () => {
-  const sound = document.getElementById("winkSound");
-  sound.play();
+document.addEventListener("keydown", function (event) {
+  console.log(event.key);
 });
+
