@@ -1,3 +1,5 @@
+alert("JS is connected");
+
 const leftEar = document.getElementById("leftEar");
 const rightEar = document.getElementById("rightEar");
 const bear = document.getElementById("bear");
