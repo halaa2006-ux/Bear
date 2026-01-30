@@ -38,6 +38,13 @@ face.addEventListener("click", () => {
   winkSound.play();
 });
 document.addEventListener("keydown", function (event) {
-  console.log(event.key);
+  if (event.key === "w") {
+    rightEye.classList.add("wink");
+
+    setTimeout(() => {
+      rightEye.classList.remove("wink");
+    }, 300);
+  }
+
 });
 
