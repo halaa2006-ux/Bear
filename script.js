@@ -4,7 +4,7 @@ const bear = document.getElementById("bear");
 const face = document.getElementById("face");
 const rightEye = document.getElementById("rightEye");
 const rightPupil = rightEye.querySelector(".pupil");
-let isHoveringFace = false;
+const winkSound = document.getElementById("winkSound");
 
  
 bear.addEventListener("mouseenter", () => {
@@ -31,4 +31,13 @@ rightEye.style.height = "60px";
   rightEye.style.borderRadius = "50%";
   rightPupil.style.opacity = "1";
   rightEye.classList.remove("no-liner");
+});
+
+face.addEventListener("click", () => {
+  winkSound.currentTime = 0; // rewind
+  winkSound.play();
+});
+document.body.addEventListener("click", () => {
+  const sound = document.getElementById("winkSound");
+  sound.play();
 });
